@@ -4,8 +4,13 @@
              xmlns:local="clr-namespace:Contactos"
              x:Class="Contactos.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ListView x:Name="contactosListView">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text=""
+                          Detail=""/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 
 </ContentPage>
