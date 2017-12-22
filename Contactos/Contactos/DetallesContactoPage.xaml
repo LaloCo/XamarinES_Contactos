@@ -2,11 +2,27 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Contactos.DetallesContactoPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+    <Grid Margin="10,20,10,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="nombreLabel"
+               Text="Nombre Apellido"
+               Grid.Column="1"/>
+
+        <StackLayout Grid.Row="1"
+                     Grid.ColumnSpan="2">
+            <Label x:Name="correoLabel"
+                   Text="correo@ejemplo.com"/>
+            <Label x:Name="telefonoLabel"
+                   Text="123-456-7890"/>
         </StackLayout>
-    </ContentPage.Content>
+
+    </Grid>
 </ContentPage>
