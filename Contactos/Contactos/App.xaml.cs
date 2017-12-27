@@ -13,15 +13,15 @@ namespace Contactos
 		{
 			InitializeComponent();
 
-			MainPage = new Contactos.MainPage();
-		}
+			MainPage = new NavigationPage(new MainPage());
+        }
 
         public static string RUTA_DB;
         public App(string ruta_bd)
         {
             InitializeComponent();
 
-            MainPage = new Contactos.MainPage();
+            MainPage = new NavigationPage(new MainPage());
 
             RUTA_DB = ruta_bd;
         }
