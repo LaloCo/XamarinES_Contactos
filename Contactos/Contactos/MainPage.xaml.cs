@@ -27,17 +27,20 @@ namespace Contactos
             Navigation.PushAsync(new DetallesContactoPage(contactoSeleccionado));
         }
 
-        protected override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
 
-            using (var conn = new SQLite.SQLiteConnection(App.RUTA_DB))
-            {
-                conn.CreateTable<Contacto>();
-                contactos = conn.Table<Contacto>().ToList();
+            //using (var conn = new SQLite.SQLiteConnection(App.RUTA_DB))
+            //{
+            //    conn.CreateTable<Contacto>();
+            //    contactos = conn.Table<Contacto>().ToList();
 
-                contactosListView.ItemsSource = contactos;
-            }
+            //    contactosListView.ItemsSource = contactos;
+            //}
+
+            contactos = await App.MobileServiceClient.GetTable<Contacto>().ToListAsync();
+            contactosListView.ItemsSource = contactos;
         }
 
         private void ToolbarItem_Clicked(object sender, EventArgs e)
