@@ -7,6 +7,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.IO;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace Contactos.Droid
 {
@@ -21,6 +22,7 @@ namespace Contactos.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            CurrentPlatform.Init();
 
             string nombreArchivo = "bd_contactos.sqlite";
             string rutaCarpeta = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace Contactos
 {
 	public partial class App : Application
 	{
+        public static MobileServiceClient MobileServiceClient = new MobileServiceClient("https://udemycontactos.azurewebsites.net");
 		public App ()
 		{
 			InitializeComponent();
