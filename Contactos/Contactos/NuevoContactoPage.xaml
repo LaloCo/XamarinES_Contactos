@@ -6,19 +6,15 @@
     <ContentPage.Content>
         <StackLayout Margin="20">
             <Entry x:Name="nombreEntry"
-                   Text="Nombre"
                    Placeholder="Nombre"/>
             <Entry x:Name="apellidoEntry"
-                   Text="Apellido Apellido2"
                    Placeholder="Apellido"/>
             <Entry x:Name="emailEntry"
-                   Text="alguien@ejemplo.com"
                    Style="{StaticResource estiloAdicional}"
                    Keyboard="Email"
                    Placeholder="Email"/>
             <Entry x:Name="telefonoEntry"
                    Style="{StaticResource estiloAdicional}"
-                   Text="123-456-7890"
                    Keyboard="Telephone"
                    Placeholder="Telefono"/>
             <Button Text="Guardar"

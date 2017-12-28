@@ -26,7 +26,7 @@ namespace Contactos.iOS
             global::Xamarin.Forms.Forms.Init();
 
             string nombreArchivo = "bd_contactos.sqlite";
-            string rutaCarpeta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "..", "Library", "Databases");
+            string rutaCarpeta = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "..", "Library");
             string rutaCompleta = Path.Combine(rutaCarpeta, nombreArchivo);
 
             LoadApplication(new App(rutaCompleta));

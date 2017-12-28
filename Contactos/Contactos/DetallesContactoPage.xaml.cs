@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,7 +13,7 @@ namespace Contactos
 	public partial class DetallesContactoPage : ContentPage
 	{
         public Contacto Contacto { get; set; }
-        public DetallesContactoPage (Contacto contacto)
+        public DetallesContactoPage (Contacto contacto) 
 		{
 			InitializeComponent ();
 
